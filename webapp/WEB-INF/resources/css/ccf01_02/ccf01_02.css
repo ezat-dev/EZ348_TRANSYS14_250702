@@ -1,3 +1,57 @@
+.t-slant-1 {
+  background: #6780bf;
+  width: 54px;
+  height: 53px;
+  position: absolute;
+  left: 1551px;
+  top: 219.63px;
+  transform-origin: 0 0;
+  transform: rotate(-10.271deg) scale(1, 1);
+}
+.t-slant-2 {
+  background: #6780bf;
+  width: 54px;
+  height: 53px;
+  position: absolute;
+  left: 1554.1px;
+  top: 215.42px;
+}
+.b-slant-1 {
+  background: #6780bf;
+  width: 54px;
+  height: 53px;
+  position: absolute;
+  left: 1551.9px;
+  top: 653.21px;
+  transform-origin: 0 0;
+  transform: rotate(-10.271deg) scale(1, 1);
+}
+.b-slant-2 {
+  background: #6780bf;
+  width: 54px;
+  height: 53px;
+  position: absolute;
+  left: 1555px;
+  top: 649px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .t-ccf-1-text {
   color: #000000;
@@ -981,39 +1035,73 @@
   width: 50px;
   height: 49px;
   position: absolute;
-  left: 1557px;
-  top: 234px;
+  left: 1556px;
+  top: 217px;
   object-fit: cover;
 }
 .t-v-25-tong-1 {
   
-  font-weight : bold;
-  color:red;
   width: 18px;
   height: 22px;
   position: absolute;
-  left: 1558px;
-  top: 235px;
+  left: 1557px;
+  top: 218px;
 }
 .t-v-25-tong-2 {
   
-  font-weight : bold;
-  color:red;
   width: 17px;
   height: 22px;
   position: absolute;
-  left: 1588px;
-  top: 235px;
+  left: 1587px;
+  top: 218px;
 }
 .t-v-25-tong-3 {
   
-  font-weight : bold;
-  color:red;
   width: 18px;
   height: 21px;
   position: absolute;
-  left: 1572px;
-  top: 261px;
+  left: 1571px;
+  top: 244px;
+}
+.t-tong-29 {
+  width: 50px;
+  height: 49px;
+  position: absolute;
+  left: 1553px;
+  top: 221.5px;
+  transform-origin: 0 0;
+  transform: rotate(-10.952deg) scale(1, 1);
+  object-fit: cover;
+}
+.t-v-29-tong-1 {
+  
+  width: 18px;
+  height: 22px;
+  position: absolute;
+  left: 1554.17px;
+  top: 222.29px;
+  transform-origin: 0 0;
+  transform: rotate(-10.952deg) scale(1, 1);
+}
+.t-v-29-tong-2 {
+ 
+  width: 17px;
+  height: 22px;
+  position: absolute;
+  left: 1583.63px;
+  top: 216.59px;
+  transform-origin: 0 0;
+  transform: rotate(-10.952deg) scale(1, 1);
+}
+.t-v-29-tong-3 {
+  
+  width: 18px;
+  height: 21px;
+  position: absolute;
+  left: 1572.86px;
+  top: 245.16px;
+  transform-origin: 0 0;
+  transform: rotate(-10.952deg) scale(1, 1);
 }
 .t-tong-26 {
   width: 50px;
@@ -2243,7 +2331,7 @@
   height: 159px;
   position: absolute;
   left: 1551px;
-  top: 130px;
+  top: 107px;
   object-fit: cover;
 }
 .t-process-data-header {
@@ -2251,10 +2339,10 @@
   border-style: solid;
   border-color: #000000;
   border-width: 2px;
-  width: 1288px;
+  width: 1383px;
   height: 22px;
   position: absolute;
-  left: 1505px;
+  left: 1600px;
   top: 407px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
@@ -2338,7 +2426,7 @@
   font-size: 14px;
   font-weight: 700;
   position: absolute;
-  left: 1372px;
+  left: 1471px;
   top: 410px;
   width: 49px;
   height: 15px;
@@ -2348,10 +2436,10 @@
   border-style: solid;
   border-color: #000000;
   border-width: 2px;
-  width: 1288px;
+  width: 1383px;
   height: 50px;
   position: absolute;
-  left: 1505px;
+  left: 1600px;
   top: 428px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
@@ -2561,7 +2649,7 @@
   width: 96px;
   height: 20px;
   position: absolute;
-  left: 1302px;
+  left: 1401px;
   top: 432px;
 }
 .t-salt-q-sp {
@@ -2573,7 +2661,7 @@
   width: 96px;
   height: 21px;
   position: absolute;
-  left: 1302px;
+  left: 1401px;
   top: 453px;
 }
 .t-salt-d-pv {
@@ -2585,7 +2673,7 @@
   width: 96px;
   height: 20px;
   position: absolute;
-  left: 1400px;
+  left: 1499px;
   top: 432px;
 }
 .t-salt-d-sp {
@@ -2597,8 +2685,32 @@
   width: 96px;
   height: 21px;
   position: absolute;
-  left: 1400px;
+  left: 1499px;
   top: 453px;
+}
+.t-rpm-text {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  position: absolute;
+  left: 1309px;
+  top: 409px;
+  width: 61px;
+  height: 15px;
+}
+.t-rpm {
+  background: #ffffff;
+  border-radius: 1px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 96px;
+  height: 21px;
+  position: absolute;
+  left: 1289px;
+  top: 443px;
 }
 .sensor-pen-1 {
   background: #ff0000;
@@ -3695,38 +3807,72 @@
   height: 49px;
   position: absolute;
   left: 1557px;
-  top: 667px;
+  top: 651px;
   object-fit: cover;
 }
 .b-v-25-tong-1 {
   
-  font-weight : bold;
-  color:red;
   width: 18px;
   height: 22px;
   position: absolute;
   left: 1558px;
-  top: 668px;
+  top: 652px;
 }
 .b-v-25-tong-2 {
-  
-  font-weight : bold;
-  color:red;
+ 
   width: 17px;
   height: 22px;
   position: absolute;
   left: 1588px;
-  top: 668px;
+  top: 652px;
 }
 .b-v-25-tong-3 {
-  
-  font-weight : bold;
-  color:red;
+ 
   width: 18px;
   height: 21px;
   position: absolute;
   left: 1572px;
-  top: 694px;
+  top: 678px;
+}
+.b-tong-29 {
+  width: 50px;
+  height: 49px;
+  position: absolute;
+  left: 1553.8px;
+  top: 655.2px;
+  transform-origin: 0 0;
+  transform: rotate(-10.952deg) scale(1, 1);
+  object-fit: cover;
+}
+.b-v-29-tong-1 {
+  
+  width: 18px;
+  height: 22px;
+  position: absolute;
+  left: 1554.97px;
+  top: 655.99px;
+  transform-origin: 0 0;
+  transform: rotate(-10.952deg) scale(1, 1);
+}
+.b-v-29-tong-2 {
+ 
+  width: 17px;
+  height: 22px;
+  position: absolute;
+  left: 1584.43px;
+  top: 650.29px;
+  transform-origin: 0 0;
+  transform: rotate(-10.952deg) scale(1, 1);
+}
+.b-v-29-tong-3 {
+ 
+  width: 18px;
+  height: 21px;
+  position: absolute;
+  left: 1573.66px;
+  top: 678.85px;
+  transform-origin: 0 0;
+  transform: rotate(-10.952deg) scale(1, 1);
 }
 .b-tong-26 {
   width: 50px;
@@ -4956,7 +5102,7 @@
   height: 159px;
   position: absolute;
   left: 1551px;
-  top: 563px;
+  top: 542px;
   object-fit: cover;
 }
 .b-process-data-header {
@@ -4964,10 +5110,10 @@
   border-style: solid;
   border-color: #000000;
   border-width: 2px;
-  width: 1288px;
+  width: 1383px;
   height: 22px;
   position: absolute;
-  left: 1505px;
+  left: 1600px;
   top: 840px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
@@ -5051,7 +5197,7 @@
   font-size: 14px;
   font-weight: 700;
   position: absolute;
-  left: 1372px;
+  left: 1471px;
   top: 843px;
   width: 49px;
   height: 15px;
@@ -5061,10 +5207,10 @@
   border-style: solid;
   border-color: #000000;
   border-width: 2px;
-  width: 1288px;
+  width: 1383px;
   height: 50px;
   position: absolute;
-  left: 1505px;
+  left: 1600px;
   top: 861px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
@@ -5274,7 +5420,7 @@
   width: 96px;
   height: 20px;
   position: absolute;
-  left: 1302px;
+  left: 1401px;
   top: 865px;
 }
 .b-salt-q-sp {
@@ -5286,7 +5432,7 @@
   width: 96px;
   height: 21px;
   position: absolute;
-  left: 1302px;
+  left: 1401px;
   top: 886px;
 }
 .b-salt-d-pv {
@@ -5298,7 +5444,7 @@
   width: 96px;
   height: 20px;
   position: absolute;
-  left: 1400px;
+  left: 1499px;
   top: 865px;
 }
 .b-salt-d-sp {
@@ -5310,8 +5456,32 @@
   width: 96px;
   height: 21px;
   position: absolute;
-  left: 1400px;
+  left: 1499px;
   top: 886px;
+}
+.b-salt-text2 {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  position: absolute;
+  left: 1309px;
+  top: 842px;
+  width: 60px;
+  height: 15px;
+}
+.b-rpm {
+  background: #ffffff;
+  border-radius: 1px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 96px;
+  height: 21px;
+  position: absolute;
+  left: 1288px;
+  top: 877px;
 }
 .sensor-pen-7 {
   background: #ff0000;
@@ -5489,7 +5659,7 @@
   font-size: 9px;
   font-weight: 700;
   position: absolute;
-  left: 1341px;
+  left: 1440px;
   top: 417px;
 }
 .t-salt-d-text {
@@ -5499,7 +5669,7 @@
   font-size: 9px;
   font-weight: 700;
   position: absolute;
-  left: 1436px;
+  left: 1535px;
   top: 417px;
 }
 .b-salt-q-text {
@@ -5509,7 +5679,7 @@
   font-size: 9px;
   font-weight: 700;
   position: absolute;
-  left: 1341px;
+  left: 1440px;
   top: 851px;
 }
 .b-salt-d-text {
@@ -5519,7 +5689,7 @@
   font-size: 9px;
   font-weight: 700;
   position: absolute;
-  left: 1436px;
+  left: 1535px;
   top: 851px;
 }
   .t-run-state-on{

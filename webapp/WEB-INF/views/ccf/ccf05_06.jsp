@@ -154,6 +154,10 @@
       <div class="t-v-25-tong-1"></div>
       <div class="t-v-25-tong-2"></div>
       <div class="t-v-25-tong-3"></div>
+      <img class="t-tong-29" src="/transys/image/ccf01_02/tong.png" />
+      <div class="t-v-29-tong-1"></div>
+      <div class="t-v-29-tong-2"></div>
+      <div class="t-v-29-tong-3"></div>
       <img class="t-tong-26" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-26-tong-1"></div>
       <div class="t-v-26-tong-2"></div>
@@ -340,10 +344,14 @@
       <div class="t-salt-d-text">드레인</div>
       <div class="t-salt-d-pv"></div>
       <div class="t-salt-d-sp"></div>
+      <div class="t-rpm-text">RPM NO.</div>
+  	  <div class="t-rpm"></div>
       <div class="cover-1"></div>
       <div class="cover-2"></div>
       <div class="cover-3"></div>
       <div class="cover-4"></div>
+      <div class="t-rpm-text">RPM NO.</div>
+  	  <div class="t-rpm"></div>
       <div class="sensor-pen-1"></div>
 	  <div class="sensor-pen-2"></div>
 	  <div class="sensor-pen-3"></div>
@@ -467,6 +475,10 @@
       <div class="b-v-25-tong-1"></div>
       <div class="b-v-25-tong-2"></div>
       <div class="b-v-25-tong-3"></div>
+      <img class="b-tong-29" src="/transys/image/ccf01_02/tong.png" />
+      <div class="b-v-29-tong-1"></div>
+      <div class="b-v-29-tong-2"></div>
+      <div class="b-v-29-tong-3"></div>
       <img class="b-tong-26" src="/transys/image/ccf01_02/tong.png" />
       <div class="b-v-26-tong-1"></div>
       <div class="b-v-26-tong-2"></div>
@@ -653,6 +665,8 @@
       <div class="b-salt-d-text">드레인</div>
       <div class="b-salt-d-pv"></div>
       <div class="b-salt-d-sp"></div>
+      <div class="b-salt-text2">RPM NO.</div>
+  	  <div class="b-rpm"></div>
   </div>
 <script>
 var overviewInterval;
@@ -818,6 +832,45 @@ function value(keys, value){
 		}
 	}
 }
+
+
+function ani(keys, value) {
+	const $elem = $("." + keys);
+
+	if (value === true) {
+	    if (!aniIntervals[keys]) {
+	        aniIntervals[keys] = setInterval(function () {
+	            $elem.animate({ opacity: 0 }, 100, function () {
+	                $elem.animate({ opacity: 1 }, 500);
+	            });
+	        }, 1500);
+	    }
+
+	    $elem.css("display", "");
+	} else {
+	    if (aniIntervals[keys]) {
+	        clearInterval(aniIntervals[keys]);
+	        delete aniIntervals[keys];
+	    }
+
+	    $elem.stop(true, true).css("opacity", 1);
+	    $elem.css("display", "none");
+	}
+	} 
+
+	/* setInterval(function () {
+		$('.b-agi-2').animate({'opacity': 0} ,100 , function () {
+			$('.b-agi-2').animate({'opacity': 1}, 500);
+		});
+	}, 1500);
+
+
+	setInterval(function () {
+		$('.sensor-pen-3').animate({'opacity': 0} ,100 , function () {
+			$('.sensor-pen-3').animate({'opacity': 1}, 500);
+		});
+	}, 1500); */
+
 
 </script>
 </body>

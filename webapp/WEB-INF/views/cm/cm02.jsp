@@ -173,6 +173,14 @@
     <div class="v-27-tong-1"></div>
     <div class="v-27-tong-2"></div>
     <div class="v-27-tong-3"></div>
+    <img class="tong-49" src="/transys/image/cm/tong.png" />
+    <div class="v-49-tong-1"></div>
+    <div class="v-49-tong-2"></div>
+    <div class="v-49-tong-3"></div>
+    <!-- <img class="con-off-5302" src="/transys/image/cm/con-on-260.png" />
+    <img class="con-on-5302" src="/transys/image/cm/con-on-260.png" />
+    <img class="con-off-5402" src="/transys/image/cm/con-on-260.png" />
+    <img class="con-on-5402" src="/transys/image/cm/con-on-260.png" /> -->
     <img class="tong-28" src="/transys/image/cm/tong.png" />
     <div class="v-28-tong-1"></div>
     <div class="v-28-tong-2"></div>
@@ -257,6 +265,14 @@
     <div class="v-48-tong-1"></div>
     <div class="v-48-tong-2"></div>
     <div class="v-48-tong-3"></div>
+    <img class="tong-50" src="/transys/image/cm/tong.png" />
+    <div class="v-50-tong-1"></div>
+    <div class="v-50-tong-2"></div>
+    <div class="v-50-tong-3"></div>
+    <!-- <img class="con-off-5301" src="/transys/image/cm/con-on-260.png" />
+    <img class="con-on-5301" src="/transys/image/cm/con-on-260.png" />
+    <img class="con-off-5401" src="/transys/image/cm/con-on-260.png" />
+    <img class="con-on-5401" src="/transys/image/cm/con-on-260.png" /> -->
     <img class="con-off-1" src="/transys/image/cm/con-off-10.png" />
     <img class="con-on-1" src="/transys/image/cm/con-on-10.png" />
     <img class="con-off-2" src="/transys/image/cm/con-off-20.png" />
@@ -483,62 +499,126 @@
     <img class="pen-rol-2" src="/transys/image/cm/pen-rol-20.png" />
     <img class="lamp-green-3" src="/transys/image/cm/lamp-green-30.png" />
     <img class="pen-rol-3" src="/transys/image/cm/pen-rol-30.png" />
-   <div class="process-data-box"></div>
-    <div class="process-sp-box"></div>
-    <div class="process-pv-box"></div>
-    <div class="process-sp-text">설정시간 [분]</div>
-    <div class="process-pv-text">잔여시간 [분]</div>
-    <div class="pro-box-6"></div>
-    <div class="pro-text-6">냉각FAN 1</div>
-    <div class="cold-pv-1"></div>
-    <div class="cold-sp-1"></div>
-    <div class="pro-box-7"></div>
-    <div class="pro-text-7">냉각FAN 2</div>
-    <div class="cold-pv-2"></div>
-    <div class="cold-sp-2"></div>
-    <div class="pro-box-8"></div>
-    <div class="pro-text-8">소려로</div>
-    <div class="tem-sp-1"></div>
-    <div class="tem-pv-1"></div>
-    <div class="pro-box-9"></div>
-    <div class="pro-text-9">NO.2 AIR</div>
-    <div class="no-2-air-sp"></div>
-    <div class="no-2-air-pv"></div>
-    <div class="pro-box-10"></div>
-    <div class="pro-text-10">NO.2 RINSE</div>
-    <div class="no-2-rinse-sp"></div>
-    <div class="no-2-rinse-pv"></div>
-    <div class="pro-box-11"></div>
-    <div class="pro-text-11">NO.2 SPRAY</div>
-    <div class="no-2-spray-sp"></div>
-    <div class="no-2-spray-pv"></div>
-    <div class="pro-box-12"></div>
-    <div class="pro-text-12">NO.2 DIP조</div>
-    <div class="no-2-dip-sp"></div>
-    <div class="no-2-dip-pv"></div>
-    <div class="pro-box-13"></div>
-    <div class="pro-text-13">NO.1 AIR</div>
-    <div class="no-1-air-sp"></div>
-    <div class="no-1-air-pv"></div>
-    <div class="pro-box-14"></div>
-    <div class="pro-text-14">NO.1 RINSE</div>
-    <div class="no-1-rinse-sp"></div>
-    <div class="no-1-rinse-pv"></div>
-    <div class="pro-box-15"></div>
-    <div class="pro-text-15">NO.1 SPRAY</div>
-    <div class="no-1-spray-sp"></div>
-    <div class="no-1-spray-pv"></div>
-    <div class="pro-box-16"></div>
-    <div class="pro-text-16">NO.1 DIP조</div>
-    <div class="no-1-dip-sp"></div>
-    <div class="no-1-dip-pv"></div>
-  <div class="sensor-pen-1"></div>
-  <div class="sensor-pen-2"></div>
-  <div class="sensor-pen-3"></div>
-  <!-- <img class="wash-1" src="/transys/image/cm/wash-10.png" />
-  <img class="wash-2" src="/transys/image/cm/wash-20.png" />
-  <img class="wash-3" src="/transys/image/cm/wash-30.png" />
-  <img class="wash-4" src="/transys/image/cm/wash-40.png" /> -->
+    
+    <div class="data-pro-box-8"></div>
+    <div class="data-pro-text-8">소려로</div>
+    <div class="data-tem-pv-1"></div>
+    
+    <div class="data-pro-box-10"></div>
+    <div class="data-pro-text-10">NO.2 RINSE</div>
+    <div class="data-no-2-rinse-pv"></div>
+    
+    
+    
+    <div class="data-pro-box-11"></div>
+    <div class="data-pro-text-11">NO.2 온수조</div>
+    <div class="data-no-2-spray-pv"></div>
+    
+    
+    
+    <div class="data-pro-box-12"></div>
+    <div class="data-pro-text-12">NO.2 DIP조</div>
+    <div class="data-no-2-dip-pv"></div>
+        
+    <div class="data-pro-box-14"></div>
+    <div class="data-pro-text-14">NO.1 RINSE</div>
+    <div class="data-no-1-rinse-pv"></div>
+    
+    
+    <div class="data-pro-box-15"></div>
+    <div class="data-pro-text-15">NO.1 온수조</div>
+    <div class="data-no-1-spray-pv"></div>
+    
+    
+    <div class="data-pro-box-16"></div>
+    <div class="data-pro-text-16">NO.1 DIP조</div>
+    <div class="data-no-1-dip-pv"></div>
+    
+    
+    <div class="process-data-box"></div>
+	<div class="process-sp-box"></div>
+	<div class="process-pv-box"></div>
+	<div class="process-sp-text">설정시간 [분]</div>
+	<div class="process-pv-text">잔여시간 [분]</div>
+	<div class="pro-box-6"></div>
+	<div class="pro-text-6">냉각FAN 1</div>
+	<div class="cold-pv-1"></div>
+	<div class="cold-sp-1"></div>
+	<div class="pro-box-7"></div>
+	<div class="pro-text-7">냉각FAN 2</div>
+	<div class="cold-pv-2"></div>
+	<div class="cold-sp-2"></div>
+	<div class="pro-box-8"></div>
+	<div class="pro-text-8">소려로</div>
+	<div class="tem-sp-1"></div>
+	<div class="tem-pv-1"></div>
+	<div class="pro-box-9"></div>
+	<div class="pro-text-9">NO.2 AIR</div>
+	<div class="no-2-air-sp"></div>
+	<div class="no-2-air-pv"></div>
+	<div class="pro-box-10"></div>
+	<div class="pro-text-10">NO.2 RINSE</div>
+	<div class="no-2-rinse-sp"></div>
+	<div class="no-2-rinse-pv"></div>
+	<div class="pro-box-11"></div>
+	<div class="pro-text-11">NO.2 SPRAY</div>
+	<div class="no-2-spray-sp"></div>
+	<div class="no-2-spray-pv"></div>
+	<div class="pro-box-12"></div>
+	<div class="pro-text-12">NO.2 DIP조</div>
+	<div class="no-2-dip-sp"></div>
+	<div class="no-2-dip-pv"></div>
+	<div class="pro-box-13"></div>
+	<div class="pro-text-13">NO.1 AIR</div>
+	<div class="no-1-air-sp"></div>
+	<div class="no-1-air-pv"></div>
+	<div class="pro-box-14"></div>
+	<div class="pro-text-14">NO.1 RINSE</div>
+	<div class="no-1-rinse-sp"></div>
+	<div class="no-1-rinse-pv"></div>
+	<div class="pro-box-15"></div>
+	<div class="pro-text-15">NO.1 SPRAY</div>
+	<div class="no-1-spray-sp"></div>
+	<div class="no-1-spray-pv"></div>
+	<div class="pro-box-16"></div>
+	<div class="pro-text-16">NO.1 DIP조</div>
+	<div class="no-1-dip-sp"></div>
+	<div class="no-1-dip-pv"></div>
+
+
+	<div class="sensor-pen-1"></div>
+	<div class="sensor-pen-2"></div>
+	<div class="sensor-pen-3"></div>
+	<img class="wash-1" src="/transys/image/cm/wash-10.png" />
+	<img class="wash-2" src="/transys/image/cm/wash-20.png" />
+	<img class="wash-3" src="/transys/image/cm/wash-30.png" />
+	<img class="wash-4" src="/transys/image/cm/wash-40.png" />
+	<img class="wash-red-1" src="/transys/image/cm/wash-red.png" />
+	<img class="wash-red-2" src="/transys/image/cm/wash-red.png" />
+	<img class="wash-red-3" src="/transys/image/cm/wash-red.png" />
+	<img class="wash-red-4" src="/transys/image/cm/wash-red.png" />
+    <div class="clean-row-red-1"></div>
+	<div class="clean-row-green-1"></div>
+    <div class="clean-row-red-2"></div>
+    <div class="clean-row-green-2"></div>
+    <div class="clean-row-red-3"></div>
+    <div class="clean-row-green-3"></div>
+    <div class="clean-row-red-4"></div>
+    <div class="clean-row-green-4"></div>
+    <img class="clean-high-green-1" src="/transys/image/cm/clean-high-green-10.png" />
+    <img class="clean-high-red-1" src="/transys/image/cm/clean-high-red-10.png" />
+    <img class="clean-high-green-2" src="/transys/image/cm/clean-high-green-20.png" />
+    <img class="clean-high-red-2" src="/transys/image/cm/clean-high-red-20.png" />
+    <img class="clean-high-green-3" src="/transys/image/cm/clean-high-green-30.png" />
+    <img class="clean-high-red-3" src="/transys/image/cm/clean-high-red-30.png" />
+    <img class="clean-high-green-4" src="/transys/image/cm/clean-high-green-40.png" />
+    <img class="clean-high-red-4" src="/transys/image/cm/clean-high-red-40.png" />
+    <img class="clean-long-green-1" src="/transys/image/cm/clean-long-green-10.png" />
+    <img class="clean-long-green-2" src="/transys/image/cm/clean-long-green-20.png" />
+    <div class="pink-box-1"></div>
+    <div class="pink-box-2"></div>
+    <div class="pink-box-3"></div>
+    <div class="pink-box-4"></div>
 <script>
 var overviewInterval;
 
@@ -704,6 +784,45 @@ function value(keys, value){
 		}
 	}
 }
+
+
+function ani(keys, value) {
+	const $elem = $("." + keys);
+
+	if (value === true) {
+	    if (!aniIntervals[keys]) {
+	        aniIntervals[keys] = setInterval(function () {
+	            $elem.animate({ opacity: 0 }, 100, function () {
+	                $elem.animate({ opacity: 1 }, 500);
+	            });
+	        }, 1500);
+	    }
+
+	    $elem.css("display", "");
+	} else {
+	    if (aniIntervals[keys]) {
+	        clearInterval(aniIntervals[keys]);
+	        delete aniIntervals[keys];
+	    }
+
+	    $elem.stop(true, true).css("opacity", 1);
+	    $elem.css("display", "none");
+	}
+	} 
+
+	/* setInterval(function () {
+		$('.b-agi-2').animate({'opacity': 0} ,100 , function () {
+			$('.b-agi-2').animate({'opacity': 1}, 500);
+		});
+	}, 1500);
+
+
+	setInterval(function () {
+		$('.sensor-pen-3').animate({'opacity': 0} ,100 , function () {
+			$('.sensor-pen-3').animate({'opacity': 1}, 500);
+		});
+	}, 1500); */
+
 
 </script>
 

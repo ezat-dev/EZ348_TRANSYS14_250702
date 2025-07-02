@@ -175,6 +175,14 @@
     <div class="v-27-tong-1"></div>
     <div class="v-27-tong-2"></div>
     <div class="v-27-tong-3"></div>
+    <img class="tong-49" src="/transys/image/cm/tong.png" />
+    <div class="v-49-tong-1"></div>
+    <div class="v-49-tong-2"></div>
+    <div class="v-49-tong-3"></div>
+    <!-- <img class="con-off-5302" src="/transys/image/cm/con-on-260.png" />
+    <img class="con-on-5302" src="/transys/image/cm/con-on-260.png" />
+    <img class="con-off-5402" src="/transys/image/cm/con-on-260.png" />
+    <img class="con-on-5402" src="/transys/image/cm/con-on-260.png" /> -->
     <img class="tong-28" src="/transys/image/cm/tong.png" />
     <div class="v-28-tong-1"></div>
     <div class="v-28-tong-2"></div>
@@ -259,6 +267,14 @@
     <div class="v-48-tong-1"></div>
     <div class="v-48-tong-2"></div>
     <div class="v-48-tong-3"></div>
+    <img class="tong-50" src="/transys/image/cm/tong.png" />
+    <div class="v-50-tong-1"></div>
+    <div class="v-50-tong-2"></div>
+    <div class="v-50-tong-3"></div>
+    <!-- <img class="con-off-5301" src="/transys/image/cm/con-on-260.png" />
+    <img class="con-on-5301" src="/transys/image/cm/con-on-260.png" />
+    <img class="con-off-5401" src="/transys/image/cm/con-on-260.png" />
+    <img class="con-on-5401" src="/transys/image/cm/con-on-260.png" /> -->
     <img class="con-off-1" src="/transys/image/cm/con-off-10.png" />
     <img class="con-on-1" src="/transys/image/cm/con-on-10.png" />
     <img class="con-off-2" src="/transys/image/cm/con-off-20.png" />
