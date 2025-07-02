@@ -25,7 +25,7 @@ public class TrackingDaoImpl implements TrackingDao{
 			ss = sqlSessionEz;
 		}
 		
-		return ss;
+		return sqlSession;
 	}
 	
 	

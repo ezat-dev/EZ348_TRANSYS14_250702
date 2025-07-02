@@ -32,6 +32,15 @@
 	
 <script>
 
+function todayDate(){
+	var now = new Date();
+	var y = now.getFullYear();
+	var m = paddingZero(now.getMonth()+1);
+	var d = paddingZero(now.gewtDate());
+
+	return y+"-"+m+"-"+d;
+}
+
 function paddingZero(value){
 	var rtn = "";
 

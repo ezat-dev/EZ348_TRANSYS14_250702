@@ -87,7 +87,7 @@
             font-size: 15pt;
         }
         #table_file {
-            width: 90%;
+            width: 70%;
             text-align: center;
             margin: auto;
             max-height: 40%;
@@ -167,7 +167,7 @@
 
                     <button id="searchbtn" style="margin-left: 100px;">조회</button>
                 
-                    <button id="excelBtn">엑셀</button>
+                    <button id="excelBtn">출력</button>
 
                 </div>
             </fieldset>
@@ -194,19 +194,20 @@
         reactiveData:true,
         headerHozAlign:"center",
         columns: [
-        	{ title: "일자", field: "date_feat", width: 320, hozAlign:"center"},
-            { title: "품명", field: "pumname", width: 320, hozAlign:"center"},
-            { title: "품명코드", field: "pumcode", width: 320, hozAlign:"center"},
-            { title: "기종", field: "gijong", width: 220, hozAlign:"center"},
-            { title: "Cycle", field: "cycleno", width: 140, hozAlign:"center"},
-            { title: "가동시간", field: "tray_time", width: 140, hozAlign:"center"},
-            { title: "Tray", field: "cnt", width: 140, hozAlign:"center"},
-            { title: "생산수량", field: "total_cnt", width: 145, hozAlign:"center"},
-            { title: "검사", field: "check_cnt", width: 140, hozAlign:"center"},
-            { title: "합계", field: "total_cnt", width: 145, hozAlign:"center"},
+        	{ title: "일자", field: "date_feat", width: 160, hozAlign:"center",headerSort:false},
+            { title: "품명", field: "pumname", width: 220, hozAlign:"center",headerSort:false},
+            { title: "품명코드", field: "pumcode", width: 200, hozAlign:"center",headerSort:false},
+            { title: "기종", field: "gijong", width: 80, hozAlign:"center",headerSort:false},
+            { title: "Cycle", field: "cycleno", width: 80, hozAlign:"right",headerSort:false},
+            { title: "가동시간", field: "tray_time", width: 100, hozAlign:"right",headerSort:false},
+            { title: "Tray", field: "cnt", width: 80, hozAlign:"right",headerSort:false},
+            { title: "생산수량", field: "loadcnt", width: 80, hozAlign:"right",headerSort:false},
+            { title: "검사", field: "check_cnt", width: 80, hozAlign:"right",headerSort:false},
+            { title: "합계", field: "total_cnt", width: 100, hozAlign:"center",headerSort:false},
         ],
         placeholder: "검색 결과가 없습니다.", 
     });
+    
 
     // 검색 버튼 클릭 이벤트
     document.getElementById("searchbtn").addEventListener("click", function() {
@@ -217,9 +218,10 @@
         // 콘솔에 출력
         console.log("선택한 날짜:", selectedDate);
      
+        
         // Ajax 요청
         $.ajax({
-            url: "/transys/work/dayPrint/list", 
+            url: "/transys/work/monthPrint/list", 
             method: "POST",
             data: {
                 p_DATE: selectedDate // 전달할 날짜 (하이픈이 제거된 날짜)
@@ -262,7 +264,9 @@
  // 엑셀 다운로드 버튼 클릭 이벤트
     $("#excelBtn").on("click", function () {
         console.log("엑셀 보내지는 날:", selectedDate); // selectedDate로 수정
-
+		table.print("active", true, {columnGroups:false});
+//    	table.print(false, true);
+    	
         $.ajax({
             url: "/transys/work/monthPrint/excelDownload",
             type: "post",

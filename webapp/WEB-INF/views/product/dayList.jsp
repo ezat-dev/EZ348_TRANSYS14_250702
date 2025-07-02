@@ -212,10 +212,10 @@
 					</div>
 					
 					<div class="row_bottom" style="margin-top:1%;">			
-						<button style="margin-left:0;" id="endSaltBtn">SALT추출</button>
+						<button style="margin-left:-125px;" id="endSaltBtn">SALT추출</button>
 
 						<button id="outBtn">출고 요청</button>
-						<button id="excelBtn">엑셀</button>
+						<!-- <button id="excelBtn">엑셀</button> -->
 					</div>
 				</div>
 			</div>

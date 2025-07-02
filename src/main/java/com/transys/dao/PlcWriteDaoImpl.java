@@ -29,7 +29,7 @@ public class PlcWriteDaoImpl implements PlcWriteDao{
 			ss = sqlSessionEz;
 		}
 		
-		return ss;
+		return sqlSession;
 	}
 
 

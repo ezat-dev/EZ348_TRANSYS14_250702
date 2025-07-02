@@ -112,14 +112,17 @@
 		margin-bottom: 3px;
 		font-size:15pt;
 	}
-	
-	#table_file{
-		width: 100%;
-		text-align: center;
-		margin: auto;
-		max-height: 40%;
-		overflow:auto;
-	}
+        #table_file {
+            width: 60%;
+            text-align: center;
+            margin: auto;
+            max-height: 40%;
+            overflow: auto;
+        }	
+        #table_file {
+            -ms-overflow-style: none;
+            height: 600px;
+        }
 
 	.NO_list{
 		text-align: center;
@@ -138,13 +141,6 @@
 		color : #123478;
 	}
 	
-	/* 테이블 스크롤 없애기 */
-	#table_file{
-		-ms-overflow-style:none;
-		height: 600px;
-		width: 100%;
-		margin-left: 100px;
-	}
 	
 	#table_file::-webkit-scrollbar { display:none; }
 	/* 테이블 스크롤 없애기 끝 */
@@ -170,12 +166,11 @@
             <div class="input_d">
                 <label> 설비명 : 
                     <select name="placename" id="placename"style="font-weight: 100; text-align: center; width: 150px;">
-                            <option value="">전체</option>
-                        <option value="CCF1_ALARM">침탄 1호기</option>
-                        <option value="CCF2_ALARM">침탄 2호기</option>
-                        <option value="CCF3_ALARM">침탄 3호기</option>
-                        <option value="CCF4_ALARM">침탄 4호기</option>
-                        <option value="CM1_ALARM">공통 1호기</option>
+                        <option value="CCF1">침탄 1호기</option>
+                        <option value="CCF2">침탄 2호기</option>
+                        <option value="CCF3">침탄 3호기</option>
+                        <option value="CCF4">침탄 4호기</option>
+                        <option value="CM1">공통 1호기</option>
                     </select> 
                 </label>
                 
@@ -185,10 +180,9 @@
    
             </div>
         </fieldset>
-
         <div id="table_file">
             <div class="countDATA">발생된 경보 수 : </div>
-            <div id="cate_list" style="width: 70%; margin-left:170px;"></div>
+            <div id="cate_list"></div>
         </div>
     </div>
 

@@ -28,7 +28,7 @@ public class UtilDaoImpl implements UtilDao{
 			ss = sqlSessionEz;
 		}
 		
-		return ss;
+		return sqlSession;
 	}
 	
 	 @Override

@@ -33,7 +33,7 @@ public class ProductDaoImpl implements ProductDao {
 			ss = sqlSessionEz;
 		}
 		
-		return ss;
+		return sqlSession;
 	}
 
     @Override

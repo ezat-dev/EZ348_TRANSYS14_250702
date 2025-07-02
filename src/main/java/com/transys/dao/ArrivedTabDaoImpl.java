@@ -33,7 +33,7 @@ public class ArrivedTabDaoImpl implements ArrivedTabDao{
 			ss = sqlSessionEz;
 		}
 		
-		return ss;
+		return sqlSession;
 	}
 	@Override
 	public List<ArrivedTab> getArrivedTabDataSelect() {

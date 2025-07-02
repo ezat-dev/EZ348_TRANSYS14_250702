@@ -87,7 +87,7 @@
             font-size: 15pt;
         }
         #table_file {
-            width: 90%;
+            width: 60%;
             text-align: center;
             margin: auto;
             max-height: 40%;
@@ -129,11 +129,16 @@
             position: sticky;
             top: 0;
         }
-        
+/*        
 		.tabulator-print-header, tabulator-print-footer{
 		    text-align:center;
+		    font-size:12pt;
 		}        
-        
+*/        
+		.tabulator-print-table > thead > tr > th{
+			text-align:center;
+		}
+
     </style>
 </head>
 
@@ -172,7 +177,7 @@
 
                     <button id="searchbtn" style="margin-left: 100px;" type="button">조회</button>
                 
-                    <button id="excelBtn" type="button">엑셀</button>
+                    <button id="excelBtn" type="button">출력</button>
 
                 </div>
             </fieldset>
@@ -200,6 +205,13 @@
     var loadCntFinalSum = 0;
     var chkCntFinalSum = 0;
     var totalCntFinalSum = 0;
+    var printHeaders = "";
+    printHeaders += "<div>";
+    printHeaders += "<span style='display:block; font-size:16pt; font-weight:700;'>열처리 일일 생산일지</span>";
+//    printHeaders += "<span style='display:block; font-size:12pt; font-weight:700; margin-left:500px;' id='tabuPrintDate'></span>";
+    printHeaders += "<span style='display:block; font-size:12pt; font-weight:700; margin-left:500px;' id='tabuWorkDate'></span>";
+    printHeaders += "</div>";
+    
     
     var table = new Tabulator("#tabulator-table", {
         height: 550,
@@ -210,18 +222,21 @@
         selectableRangeMode:"click",
         reactiveData:true,
         headerHozAlign:"center",
+        printAsHtml:true, //enable html table printing
+        printStyled:true, //copy Tabulator styling to HTML table
+        printHeader:printHeaders,
         columns: [
             { title: "호기", field: "devicecode", width: 320, hozAlign:"center", visible:false},
             { title: "호기", field: "p_DATE", width: 320, hozAlign:"center", visible:false},
             { title: "호기", field: "date_feat", width: 320, hozAlign:"center", visible:false},
-            { title: "품명", field: "pumname", width: 320, hozAlign:"center",headerSort:false},
-            { title: "품명코드", field: "pumcode", width: 320, hozAlign:"center",headerSort:false},
-            { title: "기종", field: "gijong", width: 220, hozAlign:"center",headerSort:false},
-            { title: "Cycle", field: "cycleno", width: 120, hozAlign:"center",headerSort:false},
-            { title: "가동시간", field: "tray_time", width: 120, hozAlign:"center",headerSort:false},
-            { title: "Tray", field: "cnt", width: 120, hozAlign:"center",headerSort:false},
-            { title: "생산수량", field: "loadcnt", width: 120, hozAlign:"center",headerSort:false},
-            { title: "검사", field: "check_cnt", width: 120, hozAlign:"center",headerSort:false,
+            { title: "품명", field: "pumname", width: 220, hozAlign:"center",headerSort:false},
+            { title: "품명코드", field: "pumcode", width: 200, hozAlign:"center",headerSort:false},
+            { title: "기종", field: "gijong", width: 80, hozAlign:"center",headerSort:false},
+            { title: "Cycle", field: "cycleno", width: 80, hozAlign:"right",headerSort:false},
+            { title: "가동시간", field: "tray_time", width: 100, hozAlign:"right",headerSort:false},
+            { title: "Tray", field: "cnt", width: 80, hozAlign:"right",headerSort:false},
+            { title: "생산수량", field: "loadcnt", width: 80, hozAlign:"right",headerSort:false},
+            { title: "검사", field: "check_cnt", width: 80, hozAlign:"right",headerSort:false,
             	
             	
             	
@@ -261,14 +276,25 @@
 					return false;
 				}
 			},
-            { title: "합계", field: "total_cnt", width: 145, hozAlign:"center",headerSort:false
+            { title: "합계", field: "total_cnt", width: 100, hozAlign:"center",headerSort:false
 				},
         ],
 	    rowFormatter:function(row){
 	    	row.getElement().style.fontWeight = "700";
 	    	row.getElement().style.backgroundColor = "#FFFFFF";
-//	    	console.log(row.getData());
+	    	var pumCode = row.getData().pumcode;
+	    	var pumName = row.getData().pumname;
 	    	
+	    	if(pumCode == "합계"){
+	    		row.getElement().style.backgroundColor = "#FAF4C0";
+	    	}else{
+	    		if(pumCode === "" && pumName === ""){
+	    			row.getElement().style.backgroundColor = "#CEFBC9";
+	    		}
+	    	}
+	    	
+//	    	console.log(row.getData());
+/*
 	    	var pumCode = row.getData().pumcode;
 	    	var pumName = row.getData().pumname;
 	    	var chkVal = row.getData().check_cnt;
@@ -295,9 +321,15 @@
 	    		trayTimeSum = 0;
 	    		row.getElement().style.backgroundColor = "#FAF4C0";
 	    	}else{
-	    		if(row.getCell("tray_time") != 0 && row.getCell("tray_time") != "" && pumCode != ""){
-	    			trayTimeSum = trayTimeSum + row.getData().tray_time;	    			
-	    		}
+				if(pumCode != "" && pumCode != null){
+					if(row.getCell("tray_time") != 0 && row.getCell("tray_time") != ""){
+						trayTimeSum = trayTimeSum + row.getData().tray_time;	    			
+					}
+				}else{
+					//검사값 합, 가동시간값 합 초기화
+					chkRowSum = 0;
+					trayTimeSum = 0;	
+				}
 	    		
 	    		//품명 "", 품명코드 "" 일때 최종합계값 적용
 	    		if(pumCode === "" && pumName === ""){
@@ -330,6 +362,7 @@
 
 
 	    	//맨 밑 합계값 구하기
+*/	    	
 		},
 		rowClick:function(e, row){
 			$(".tabulator-table > .tabulator-row").each(function(index, item){
@@ -345,6 +378,19 @@
 			});			
 		},
         placeholder: "검색 결과가 없습니다.", 
+        printFormatter:function(tableHolderElement, tableElement){
+            //tableHolderElement - The element that holds the header, footer and table elements
+            //tableElement - The table
+//            console.log(tableElement);
+//            console.log(tableElement.getElement());
+//            tableHolderElement
+//			$(".tabulator-print-table > thead > tr > th").css("text-align","center");
+
+
+			
+			$("#tabuPrintDate").text("출력일자 : "+todayDate());
+			$("#tabuWorkDate").text("생산일자 : "+$("#to_date").val());
+        }     
     });
     
 	//2025-01-15 추가(검사값 수정)
@@ -387,7 +433,87 @@
             },
             success: function(response) {
                 // 서버 응답에서 data 배열만 추출하여 Tabulator에 전달
-                table.replaceData(response.data); 
+                //계산식 추가
+ //               console.log(response.data);
+                
+                var data = response.data;
+
+                data.forEach(function(row, idx){
+//                	console.log(row,idx);
+					var pumCode = row.pumcode;
+					var pumName = row.pumname;
+					
+					var chkVal = row.check_cnt;
+					if(chkVal != 0 && chkVal != "" && pumCode != "합계"){
+						chkRowSum = chkRowSum + chkVal;
+					}
+					
+			    	if(pumCode == "합계"){
+			    		
+			    		row.check_cnt = chkRowSum;
+						var setVal = row.loadcnt - row.check_cnt;
+						
+						row.total_cnt = setVal;
+						row.tray_time = trayTimeSum;
+						
+						//제일 아래 최종합계 구하기
+					    trayTimeFinalSum = trayTimeFinalSum + trayTimeSum;		//가동시간
+					    trayFinalSum = trayFinalSum + row.cnt;					//tray
+					    loadCntFinalSum = loadCntFinalSum + row.loadcnt;		//생산수량
+					    chkCntFinalSum = chkCntFinalSum + row.check_cnt;		//검사
+					    totalCntFinalSum = totalCntFinalSum + row.total_cnt;	//합계
+						
+						//검사값 합, 가동시간값 합 초기화
+			    		chkRowSum = 0;
+			    		trayTimeSum = 0;
+//			    		row.getElement().style.backgroundColor = "#FAF4C0";
+			    	}else{
+						if(pumCode != "" && pumCode != null){
+							if(row.tray_time != 0 && row.tray_time != ""){
+								trayTimeSum = trayTimeSum + row.tray_time;	    			
+							}
+						}else{
+							//검사값 합, 가동시간값 합 초기화
+							chkRowSum = 0;
+							trayTimeSum = 0;	
+						}
+			    		
+			    		//품명 "", 품명코드 "" 일때 최종합계값 적용
+			    		if(pumCode === "" && pumName === ""){
+			    						    			
+			    			row.tray_time = trayTimeFinalSum;
+			    			row.cnt = trayFinalSum;
+			    			row.loadcnt = loadCntFinalSum;
+			    			row.check_cnt = chkCntFinalSum;
+			    			row.total_cnt = totalCntFinalSum;
+			    			
+			    			trayTimeFinalSum = 0;
+			    			trayFinalSum = 0;
+			    			loadCntFinalSum = 0;
+			    			chkCntFinalSum = 0;
+			    			totalCntFinalSum = 0;
+			    			
+//			    			row.getElement().style.backgroundColor = "#CEFBC9";
+			    		}
+			    	}
+			    	
+//			    	console.log(pumName);
+			    	
+			    	
+
+			    	if(pumName.indexOf("호기") != -1){
+			    		
+		    			row.tray_time = null;
+		    			row.cnt = null;
+		    			row.loadcnt = null;
+		    			row.check_cnt = null;
+		    			row.total_cnt = null;
+			    	}
+
+                });
+
+
+                table.replaceData(data); 
                 document.querySelector(".countDATA").textContent = "조회된 데이터 수 : " + response.data.length;
 //                console.log("서버에서 받아온 데이터:", response.data);
             },
@@ -419,12 +545,31 @@
         return num < 10 ? "0" + num : num;
     }
 
+    
+    
 
  // 엑셀 다운로드 버튼 클릭 이벤트
     $("#excelBtn").on("click", function () {
     	//2025-02-26변경
-//		table.print("active", true, {columnGroups:false});
+		table.print("active", true, {columnGroups:false});
 //    	table.print(false, true);
+    	getWorkDataPrintList();
+/*
+		$("#tabulator-table").print({
+        	globalStyles: true,
+        	mediaPrint: false,
+        	stylesheet: null,
+        	noPrintSelector: ".no-print",
+        	iframe: true,
+        	append: null,
+        	prepend: null,
+        	manuallyCopyFormValues: true,
+        	deferred: $.Deferred(),
+        	timeout: 750,
+        	title: null,
+        	doctype: '<!doctype html>'
+		});
+*/
 //		console.log(table.getData());
 //		console.log(typeof table.getData());
 
@@ -443,8 +588,8 @@
             dataType: "json",
             data:{"jsonData" : jsonData},
             success: function (result) {
-                console.log(result.data);
-
+//                console.log(result.data);
+/*
 				setTimeout(function(){
 					
 					var resultData = result.data;
@@ -453,16 +598,17 @@
 					
 					var downLoadUrl = "/printFile/"+fileName;
 					
-					console.log(downLoadUrl);
+//					console.log(downLoadUrl);
 					$("#downLoadLink").prop("href",downLoadUrl);
 					$("#downLoadLink").prop("download",fileName);
 					
 					$("#downLoadLink")[0].click();
+					
 				},300);
-				
+*/		
 //				window.location.href = downLoadUrl;
 				
-//                alert("D:\\생산일지\\일간생산일지 저장 완료되었습니다.");
+                alert("D:\\생산일지\\일간생산일지 저장 완료되었습니다.");
             },
             error: function (xhr, status, error) {
                

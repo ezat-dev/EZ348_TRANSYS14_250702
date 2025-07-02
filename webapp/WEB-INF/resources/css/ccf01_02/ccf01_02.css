@@ -5522,3 +5522,164 @@
   left: 1436px;
   top: 851px;
 }
+  .t-run-state-on{
+	    color: green;
+	    text-align: left;
+	    font-family: "Inter-Bold", sans-serif;
+	    font-size: 24pt;
+	    font-weight: 700;
+	    position: absolute;
+	    left: 140px;
+	    top: 148px;
+   }
+   .t-run-state-off{
+	    color: red;
+	    text-align: left;
+	    font-family: "Inter-Bold", sans-serif;
+	    font-size: 24pt;
+	    font-weight: 700;
+	    position: absolute;
+	    left: 140px;
+	    top: 148px;
+   }
+   .t-car2-prd{
+    color: black;
+    text-align: left;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 16pt;
+    font-weight: 700;
+    position: absolute;
+    left: 20px;
+    top: 328px;
+   }
+   .t-car2-inout{
+    color: black;
+    text-align: left;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 16pt;
+    font-weight: 700;
+    position: absolute;
+    left: 20px;
+    top: 348px;
+   }
+   .t-car2-move{
+    color: black;
+    text-align: left;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 16pt;
+    font-weight: 700;
+    position: absolute;
+    left: 20px;
+    top: 368px;
+   }
+   .t-car1-prd{
+    color: black;
+    text-align: left;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 16pt;
+    font-weight: 700;
+    position: absolute;
+    left: 1740px;
+    top: 328px;
+   }
+   .t-car1-inout{
+    color: black;
+    text-align: left;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 16pt;
+    font-weight: 700;
+    position: absolute;
+    left: 1740px;
+    top: 348px;
+   }
+   .t-car1-move{
+    color: black;
+    text-align: left;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 16pt;
+    font-weight: 700;
+    position: absolute;
+    left: 1740px;
+    top: 368px;
+   }
+   
+   .b-run-state-on{
+	    color: green;
+	    text-align: left;
+	    font-family: "Inter-Bold", sans-serif;
+	    font-size: 24pt;
+	    font-weight: 700;
+	    position: absolute;
+	    left: 140px;
+	    top: 588px;
+   }
+   .b-run-state-off{
+	    color: red;
+	    text-align: left;
+	    font-family: "Inter-Bold", sans-serif;
+	    font-size: 24pt;
+	    font-weight: 700;
+	    position: absolute;
+	    left: 140px;
+	    top: 588px;
+   }
+   .b-car2-prd{
+    color: black;
+    text-align: left;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 16pt;
+    font-weight: 700;
+    position: absolute;
+    left: 20px;
+    top: 768px;
+   }
+   .b-car2-inout{
+    color: black;
+    text-align: left;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 16pt;
+    font-weight: 700;
+    position: absolute;
+    left: 20px;
+    top: 788px;
+   }
+   .b-car2-move{
+    color: black;
+    text-align: left;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 16pt;
+    font-weight: 700;
+    position: absolute;
+    left: 20px;
+    top: 808px;
+   }
+   .b-car1-prd{
+    color: black;
+    text-align: left;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 16pt;
+    font-weight: 700;
+    position: absolute;
+    left: 1740px;
+    top: 768px;
+   }
+   .b-car1-inout{
+    color: black;
+    text-align: left;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 16pt;
+    font-weight: 700;
+    position: absolute;
+    left: 1740px;
+    top: 788px;
+   }
+   .b-car1-move{
+    color: black;
+    text-align: left;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 16pt;
+    font-weight: 700;
+    position: absolute;
+    left: 1740px;
+    top: 808px;
+   }

@@ -23,6 +23,12 @@ public class ActionMap {
 			result = "b";
 		}else if(text.contains("yello-right")) {
 			result = "b";
+		}else if(text.contains("sensor-pen")) {
+			result = "ani";
+		}else if(text.contains("agi")) {
+			result = "ani";
+		}else if(text.contains("wash-red")) {
+			result = "ani";
 		}else {
 			//v는 .val포함
 			result = "v";

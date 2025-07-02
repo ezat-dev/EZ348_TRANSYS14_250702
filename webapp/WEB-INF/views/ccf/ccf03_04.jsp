@@ -653,6 +653,22 @@
       <div class="b-salt-d-text">드레인</div>
       <div class="b-salt-d-pv"></div>
       <div class="b-salt-d-sp"></div>
+	  <div class="t-run-state-on text-green">자동운전중</div>
+	  <div class="t-run-state-off text-red">수동운전중</div>
+	  <div class="t-car2-prd">대차-2 처리품감지</div>
+	  <div class="t-car2-inout">대차-2 장입,추출중</div>
+	  <div class="t-car2-move">대차-2 이동중</div>
+	  <div class="t-car1-prd">대차-1 처리품감지</div>
+	  <div class="t-car1-inout">대차-1 장입,추출중</div>
+	  <div class="t-car1-move">대차-1 이동중</div>      
+	  <div class="b-run-state-on text-green">자동운전중</div>
+	  <div class="b-run-state-off text-red">수동운전중</div>
+	  <div class="b-car2-prd">대차-2 처리품감지</div>
+	  <div class="b-car2-inout">대차-2 장입,추출중</div>
+	  <div class="b-car2-move">대차-2 이동중</div>
+	  <div class="b-car1-prd">대차-1 처리품감지</div>
+	  <div class="b-car1-inout">대차-1 장입,추출중</div>
+	  <div class="b-car1-move">대차-1 이동중</div>    		  
   </div>
 <script>
 var overviewInterval;

@@ -29,7 +29,7 @@ public class MchInputDaoImpl implements MchInputDao{
 			ss = sqlSessionEz;
 		}
 		
-		return ss;
+		return sqlSession;
 	}
 
 

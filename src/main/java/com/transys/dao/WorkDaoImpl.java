@@ -30,7 +30,7 @@ public class WorkDaoImpl implements WorkDao {
 			ss = sqlSessionEz;
 		}
 		
-		return ss;
+		return sqlSession;
 	}
     
     

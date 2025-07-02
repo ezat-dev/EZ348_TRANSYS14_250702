@@ -217,12 +217,12 @@
 						<button id="addBtn">추가</button>				
 						<button id="deleteBtn">삭제</button>
 						<button id="forcingStartBtn">강제투입</button>
-						<button id="excelBtn">엑셀</button>
+						<!-- <button id="excelBtn">엑셀</button> -->
 						
 					</div>
 					
 					<div class="row_bottom" style="margin-top:1%;">			
-					<button style="margin-left: 209px; width: 184px;" id="mMoveBtn">공통설비이동</button>
+					<button style="margin-left: 336px; width: 184px;" id="mMoveBtn">공통설비이동</button>
 
 					<button style="width: 184px;" id="5forcingStartBtn">-5일 자료완료</button>
 

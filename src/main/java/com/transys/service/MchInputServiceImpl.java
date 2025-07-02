@@ -118,6 +118,9 @@ public class MchInputServiceImpl implements MchInputService{
 					//창고 입고신호 임시값
 					opcData.setOpcData("Transys.MCHINPUT.CM01.MCHINPUT_CHK_TMP", false);
 		
+					//t_workinline에서 해당 호기의 품번 삭제
+					mchInputDao.setMchDataDeleteWorkInline(mchData);					
+					
 					//마지막 창고 입고내역
 					desc.append("--> 입고완료");
 					opcData.setOpcData("Transys.MCHINPUT.CM01.INPUT_COUNT", Short.parseShort(MainController.plcCount+""));
