@@ -47,7 +47,8 @@ public class MchInputServiceImpl implements MchInputService{
 			//t_workinline, t_product 조인쿼리 실행
 			MchInput mchData = mchInputDao.getMchInputDataSelectWorkInline(mchInput);
 			short resetValue = 0;
-
+			
+			
 			//가져온 데이터가 있을때만
 			if(mchData != null) {
 				if(mchData.getRegtime() != null) {
@@ -128,11 +129,16 @@ public class MchInputServiceImpl implements MchInputService{
 					
 				}
 			}else {
+				
 				//조회 카운터가 0이하이면 입고요청에러로 INPUT_TAB에 INSERT 후 리턴
 				//카운트0 대신에 받아온 데이터가 null로 구분
 				MchInput mchTemp = new MchInput();
 				mchTemp.setDevicecode(mchInput.getDevicecode());
-//				mchInputDao.setMchDataInsertInputTabFail(mchTemp);
+				mchInputDao.setMchDataInsertInputTabFail(mchTemp);
+				
+
+				desc.append("창고입고 일치하는 제품 없음 : "+mchInput.getPumbun()+"// ");			
+				logger.info("MCHINPUT(14호기) : {}",desc.toString());	
 			}
 			
 			
@@ -225,6 +231,10 @@ public class MchInputServiceImpl implements MchInputService{
 //			logger.info("MCHINPUT(14호기) : {}",desc.toString());					
 			
 			Map<String, Object> plcCountMap = opcDataMap.getOpcData("Transys.MCHINPUT.CM01.INPUT_COUNT");	//가상태그
+			desc.append("창고입고 요청신호 : "+mchInputChk+"// ");	
+			desc.append("창고 PLC태그 - 호기 : "+plcDevice+"// 품번 :  "+plcPumbun+"// ");	
+			desc.append("창고 저장태그 - 호기 : "+saveDevice+"// 품번 : "+savePumbun+"// ");	
+			logger.info("MCHINPUT(14호기) : {}",desc.toString());	
 			
 			//PLC 창고입고카운트 1증가
 			MainController.plcCount = Integer.parseInt(plcCountMap.get("value").toString());			
@@ -232,13 +242,29 @@ public class MchInputServiceImpl implements MchInputService{
 			
 	        //txt_INPUT1 값이 txt_INPUT 값보다 먼저 삭제되는 경우가 발생하여 변수로 저장한 값으로 비교(이동진 수정 : 2012.09.07)
 			if(!"0".equals(savePumbun) && !"0".equals(saveDevice)) {
+				desc.append("창고 입고요청 프로세스 시작");	
+				logger.info("MCHINPUT(14호기) : {}",desc.toString());	
 				
 				mchInput(savePumbun, saveDevice);
 				
 			}else {
 				//로그남기기(입고등록 중단)
+				desc.append("데이터 이상체크");	
+				desc.append("창고입고 요청신호 : "+mchInputChk+"// ");	
+				desc.append("창고 PLC태그 - 호기 : "+plcDevice+"// 품번 :  "+plcPumbun+"// ");	
+				desc.append("창고 저장태그 - 호기 : "+saveDevice+"// 품번 : "+savePumbun+"// ");	
+				logger.info("MCHINPUT(14호기) : {}",desc.toString());	
+				
 			}
 			
+		}else {
+			if(!"0".equals(savePumbun) && !"0".equals(saveDevice)) {
+				desc.append("창고입고 요청신호 : "+mchInputChk+"// ");	
+				desc.append("창고 PLC태그 - 호기 : "+plcDevice+"// 품번 :  "+plcPumbun+"// ");	
+				desc.append("창고 저장태그 - 호기 : "+saveDevice+"// 품번 : "+savePumbun+"// ");	
+				logger.info("MCHINPUT(14호기) : {}",desc.toString());	
+				
+			}
 		}
 		
 

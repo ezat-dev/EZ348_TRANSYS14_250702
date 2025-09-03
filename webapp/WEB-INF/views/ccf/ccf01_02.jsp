@@ -36,6 +36,24 @@
        margin: 0;
        padding: 0;
    }
+   
+@keyframes blink-effect {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation: blink-effect 1s step-end infinite;
+
+  /*
+  animation-name: blink-effect;
+  animation-duration: 1s;
+  animation-iteration-count:infinite;
+  animation-timing-function:step-end;
+  */
+}
+   
    </style>
   <title>Document</title>
 </head>
@@ -50,10 +68,10 @@
       <div class="t-ccf-1-text">침탄로 1호기</div>
 <!--      <div class="t-ccf-1-ship"></div>
      <div class="b-ccf-1-ship-text">1호기 출고요청</div> -->
-      <!-- <img class="t-tong-0" src="/transys/image/ccf01_02/tong-00.png" />
+<!--         <img class="t-tong-0" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-0-tong-1"></div>
       <div class="t-v-0-tong-2"></div>
-      <div class="t-v-0-tong-3"></div> -->
+      <div class="t-v-0-tong-3"></div>--> 
       <img class="t-tong-1" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-1-tong-1"></div>
       <div class="t-v-1-tong-2"></div>
@@ -154,6 +172,11 @@
       <div class="t-v-25-tong-1"></div>
       <div class="t-v-25-tong-2"></div>
       <div class="t-v-25-tong-3"></div>
+      <img class="t-tong-31" src="/transys/image/ccf01_02/tong.png" />
+      <div class="t-v-31-tong-1"></div>
+      <div class="t-v-31-tong-2"></div>
+      <div class="t-v-31-tong-3"></div>
+      
       <img class="t-tong-26" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-26-tong-1"></div>
       <div class="t-v-26-tong-2"></div>
@@ -340,10 +363,12 @@
       <div class="t-salt-d-text">드레인</div>
       <div class="t-salt-d-pv"></div>
       <div class="t-salt-d-sp"></div>
-      <div class="cover-1"></div>
+       <div class="cover-1"></div>
       <div class="cover-2"></div>
       <div class="cover-3"></div>
-      <div class="cover-4"></div>
+      <div class="cover-4"></div> 
+      <div class="t-rpm-text">RPM NO.</div>
+  	  <div class="t-rpm"></div>
       <div class="sensor-pen-1"></div>
 	  <div class="sensor-pen-2"></div>
 	  <div class="sensor-pen-3"></div>
@@ -467,6 +492,10 @@
       <div class="b-v-25-tong-1"></div>
       <div class="b-v-25-tong-2"></div>
       <div class="b-v-25-tong-3"></div>
+      <img class="b-tong-31" src="/transys/image/ccf01_02/tong.png" />
+      <div class="b-v-31-tong-1"></div>
+      <div class="b-v-31-tong-2"></div>
+      <div class="b-v-31-tong-3"></div>
       <img class="b-tong-26" src="/transys/image/ccf01_02/tong.png" />
       <div class="b-v-26-tong-1"></div>
       <div class="b-v-26-tong-2"></div>
@@ -653,25 +682,42 @@
       <div class="b-salt-d-text">드레인</div>
       <div class="b-salt-d-pv"></div>
       <div class="b-salt-d-sp"></div>
+      <div class="b-salt-text2">RPM NO.</div>
+  	  <div class="b-rpm"></div>
 	  <div class="t-run-state-on text-green">자동운전중</div>
 	  <div class="t-run-state-off text-red">수동운전중</div>
-	  <div class="t-car2-prd">대차-2 처리품감지</div>
-	  <div class="t-car2-inout">대차-2 장입,추출중</div>
-	  <div class="t-car2-move">대차-2 이동중</div>
-	  <div class="t-car1-prd">대차-1 처리품감지</div>
-	  <div class="t-car1-inout">대차-1 장입,추출중</div>
-	  <div class="t-car1-move">대차-1 이동중</div>      
+	  <div class="t-car2-prd-zz" style="display:none;">대차-2 처리품감지</div>
+	  <div class="t-car2-inout-zz" style="display:none;">대차-2 장입,추출중</div>
+	  <div class="t-car2-move-zz" style="display:none;">대차-2 이동중</div>
+	  <div class="t-car1-prd-zz">대차-1 처리품감지</div>
+	  <div class="t-car1-inout-zz">대차-1 장입,추출중</div>
+	  <div class="t-car1-move-zz">대차-1 이동중</div>      
 	  <div class="b-run-state-on text-green">자동운전중</div>
 	  <div class="b-run-state-off text-red">수동운전중</div>
-	  <div class="b-car2-prd">대차-2 처리품감지</div>
-	  <div class="b-car2-inout">대차-2 장입,추출중</div>
-	  <div class="b-car2-move">대차-2 이동중</div>
-	  <div class="b-car1-prd">대차-1 처리품감지</div>
-	  <div class="b-car1-inout">대차-1 장입,추출중</div>
-	  <div class="b-car1-move">대차-1 이동중</div>    	  
+	  <div class="b-car2-prd-zz" style="display:none;">대차-2 처리품감지</div>
+	  <div class="b-car2-inout-zz" style="display:none;">대차-2 장입,추출중</div>
+	  <div class="b-car2-move-zz" style="display:none;">대차-2 이동중</div>
+	  <div class="b-car1-prd-zz">대차-1 처리품감지</div>
+	  <div class="b-car1-inout-zz">대차-1 장입,추출중</div>
+	  <div class="b-car1-move-zz">대차-1 이동중</div>    	  
   </div>
 <script>
+
 var overviewInterval;
+
+var t_car1_prd_zz = false;	//대차-1 처리품감지
+var t_car1_inout_zz = false;//대차-1 장입,추출중
+var t_car1_move_zz = false;	//대차-1 이동중
+var b_car1_prd_zz = false;	//대차-1 처리품감지
+var b_car1_inout_zz = false;//대차-1 장입,추출중
+var b_car1_move_zz = false;	//대차-1 이동중
+
+var t_car2_prd_zz = false;	//대차-2 처리품감지
+var t_car2_inout_zz = false;//대차-2 장입,추출중
+var t_car2_move_zz = false;	//대차-2 이동중
+var b_car2_prd_zz = false;	//대차-2 처리품감지
+var b_car2_inout_zz = false;//대차-2 장입,추출중
+var b_car2_move_zz = false;	//대차-2 이동중
 
 //로드
 $(function(){
@@ -748,8 +794,65 @@ function v(keys, value){
 			$("."+keys).css("display","none");
 		}else if(keys.indexOf("con-on") != -1){
 			$("."+keys).css("display","none");
+		}else if(keys.indexOf("t-run-state-on") != -1){
+			$(".t-run-state-off").css("display","none");			
+			$(".t-run-state-on").css("display","");
+		}else if(keys.indexOf("b-run-state-on") != -1){
+			$(".b-run-state-off").css("display","none");
+			$(".b-run-state-on").css("display","");
+		}else if(keys.indexOf("t-car2-prd") != -1){
+			t_car2_prd_zz = true;			
+		}else if(keys.indexOf("t-car2-inout") != -1){
+			t_car2_inout_zz = true;			
+		}else if(keys.indexOf("t-car2-move") != -1){
+			t_car2_move_zz = true;			
+		}else if(keys.indexOf("b-car2-prd") != -1){
+			b_car2_prd_zz = true;			
+		}else if(keys.indexOf("b-car2-inout") != -1){
+			b_car2_inout_zz = true;			
+		}else if(keys.indexOf("b-car2-move") != -1){
+			b_car2_move_zz = true;			
+		}else if(keys.indexOf("t-car1-prd") != -1){
+			t_car1_prd_zz = true;			
+		}else if(keys.indexOf("t-car1-inout") != -1){
+			t_car1_inout_zz = true;			
+		}else if(keys.indexOf("t-car1-move") != -1){
+			t_car1_move_zz = true;			
+		}else if(keys.indexOf("b-car1-prd") != -1){
+			b_car1_prd_zz = true;			
+		}else if(keys.indexOf("b-car1-inout") != -1){
+			b_car1_inout_zz = true;			
+		}else if(keys.indexOf("b-car1-move") != -1){
+			b_car1_move_zz = true;			
 		}else{
 			$("."+keys).css("display","");
+		}
+
+		if(keys.indexOf("-agi-") != -1){
+			$("."+keys).removeClass("blink");
+		}
+
+		if(keys == "t-slant-1"){
+			
+			$(".t-tong-31").css("display","");
+			$(".t-v-31-tong-1").css("display","");
+			$(".t-v-31-tong-2").css("display","");
+			$(".t-v-31-tong-3").css("display","");
+			$(".t-tong-25").css("display","none");
+			$(".t-v-25-tong-1").css("display","none");
+			$(".t-v-25-tong-2").css("display","none");
+			$(".t-v-25-tong-3").css("display","none");
+		}
+
+		if(keys == "b-slant-1"){
+			$(".b-tong-31").css("display","");
+			$(".b-v-31-tong-1").css("display","");
+			$(".b-v-31-tong-2").css("display","");
+			$(".b-v-31-tong-3").css("display","");
+			$(".b-tong-25").css("display","none");
+			$(".b-v-25-tong-1").css("display","none");
+			$(".b-v-25-tong-2").css("display","none");
+			$(".b-v-25-tong-3").css("display","none");
 		}
 		
 	}else{		
@@ -781,17 +884,66 @@ function v(keys, value){
 		}else if(keys.indexOf("yellow") != -1 &&
 					keys.indexOf("_") == -1){
 			$("."+keys).css("display","");
-			$("."+keys).css("animation","blink-effect 1s step-end infinite");			
+//			$("."+keys).css("animation","blink-effect 1s step-end infinite");			
 		}else if(keys.indexOf("red") != -1 &&
 					keys.indexOf("_") == -1){
 			$("."+keys).css("display","");
 		}else if(keys.indexOf("con-on") != -1){
 			$("."+keys).css("display","");
-		}else{
-		
+		}else if(keys.indexOf("t-run-state-on") != -1){
+			$(".t-run-state-off").css("display","");
+			$(".t-run-state-on").css("display","none");
+		}else if(keys.indexOf("b-run-state-on") != -1){
+			$(".b-run-state-off").css("display","");
+			$(".b-run-state-on").css("display","none");
+		}else if(keys.indexOf("t-car2-prd") != -1){
+			t_car2_prd_zz = false;			
+		}else if(keys.indexOf("t-car2-inout") != -1){
+			t_car2_inout_zz = false;			
+		}else if(keys.indexOf("t-car2-move") != -1){
+			t_car2_move_zz = false;			
+		}else if(keys.indexOf("b-car2-prd") != -1){
+			b_car2_prd_zz = false;			
+		}else if(keys.indexOf("b-car2-inout") != -1){
+			b_car2_inout_zz = false;			
+		}else if(keys.indexOf("b-car2-move") != -1){
+			b_car2_move_zz = false;			
+		}else if(keys.indexOf("t-car1-prd") != -1){
+			t_car1_prd_zz = true;			
+		}else if(keys.indexOf("t-car1-inout") != -1){
+			t_car1_inout_zz = true;			
+		}else if(keys.indexOf("t-car1-move") != -1){
+			t_car1_move_zz = true;			
+		}else if(keys.indexOf("b-car1-prd") != -1){
+			b_car1_prd_zz = true;			
+		}else if(keys.indexOf("b-car1-inout") != -1){
+			b_car1_inout_zz = true;			
+		}else if(keys.indexOf("b-car1-move") != -1){
+			b_car1_move_zz = true;			
+		}else{		
 			$("."+keys).css("display","none");
 		}
 
+
+		if(keys.indexOf("-agi-") != -1){
+//			ani(keys, value);
+			$("."+keys).addClass("blink");
+		}
+		
+		
+		if(keys == "t-slant-1"){
+			$(".t-tong-31").css("display","none");
+			$(".t-v-31-tong-1").css("display","none");
+			$(".t-v-31-tong-2").css("display","none");
+			$(".t-v-31-tong-3").css("display","none");
+		}
+
+		if(keys == "b-slant-1"){
+			$(".b-tong-31").css("display","none");
+			$(".b-v-31-tong-1").css("display","none");
+			$(".b-v-31-tong-2").css("display","none");
+			$(".b-v-31-tong-3").css("display","none");
+		}
 		
 	}
 	
@@ -815,6 +967,121 @@ function value(keys, value){
 	$("."+keys).text(value);
 	$("."+keys).css("text-align","center");
 	$("."+keys).css("font-size","12pt");
+
+	if(keys.indexOf("no2_car_hogi") != -1){
+		if(value == 1){
+			$(".b-car2-prd-zz").css("display","none");
+			$(".b-car2-inout-zz").css("display","none");
+			$(".b-car2-move-zz").css("display","none");
+			if(t_car2_prd_zz){
+				$(".t-car2-prd-zz").css("display","");
+			}else{
+				$(".t-car2-prd-zz").css("display","none");
+			}
+			if(t_car2_inout_zz){
+				$(".t-car2-inout-zz").css("display","");
+			}else{
+				$(".t-car2-inout-zz").css("display","none");
+			}
+			if(t_car2_move_zz){
+				$(".t-car2-move-zz").css("display","");
+			}else{
+				$(".t-car2-move-zz").css("display","none");
+			}
+		}else if(value == 2){
+			$(".t-car2-prd-zz").css("display","none");
+			$(".t-car2-inout-zz").css("display","none");
+			$(".t-car2-move-zz").css("display","none");
+			
+			if(b_car2_prd_zz){
+				$(".b-car2-prd-zz").css("display","");
+			}else{
+				$(".b-car2-prd-zz").css("display","none");
+			}
+			if(b_car2_inout_zz){
+				$(".b-car2-inout-zz").css("display","");
+			}else{
+				$(".b-car2-inout-zz").css("display","none");
+			}
+			if(b_car2_move_zz){
+				$(".b-car2-move-zz").css("display","");
+			}else{
+				$(".b-car2-move-zz").css("display","none");
+			}
+		}else{
+			$(".t-car2-prd-zz").css("display","none");
+			$(".t-car2-inout-zz").css("display","none");
+			$(".t-car2-move-zz").css("display","none");
+			
+			$(".b-car2-prd-zz").css("display","none");
+			$(".b-car2-inout-zz").css("display","none");
+			$(".b-car2-move-zz").css("display","none");			
+		}
+	}
+
+	if(keys.indexOf("no1_car_hogi") != -1){
+		if(value == 1){
+			$(".b-car1-prd-zz").css("display","none");
+			$(".b-car1-inout-zz").css("display","none");
+			$(".b-car1-move-zz").css("display","none");
+			if(t_car1_prd_zz){
+				$(".t-car1-prd-zz").css("display","");
+			}else{
+				$(".t-car1-prd-zz").css("display","none");
+			}
+			if(t_car1_inout_zz){
+				$(".t-car1-inout-zz").css("display","");
+			}else{
+				$(".t-car1-inout-zz").css("display","none");
+			}
+			if(t_car1_move_zz){
+				$(".t-car1-move-zz").css("display","");
+			}else{
+				$(".t-car1-move-zz").css("display","none");
+			}
+		}else if(value == 2){
+			$(".t-car1-prd-zz").css("display","none");
+			$(".t-car1-inout-zz").css("display","none");
+			$(".t-car1-move-zz").css("display","none");
+			
+			if(b_car1_prd_zz){
+				$(".b-car1-prd-zz").css("display","");
+			}else{
+				$(".b-car1-prd-zz").css("display","none");
+			}
+			if(b_car1_inout_zz){
+				$(".b-car1-inout-zz").css("display","");
+			}else{
+				$(".b-car1-inout-zz").css("display","none");
+			}
+			if(b_car1_move_zz){
+				$(".b-car1-move-zz").css("display","");
+			}else{
+				$(".b-car1-move-zz").css("display","none");
+			}
+		}else{
+			$(".t-car1-prd-zz").css("display","none");
+			$(".t-car1-inout-zz").css("display","none");
+			$(".t-car1-move-zz").css("display","none");
+			
+			$(".b-car1-prd-zz").css("display","none");
+			$(".b-car1-inout-zz").css("display","none");
+			$(".b-car1-move-zz").css("display","none");			
+		}
+	}
+	
+	if(keys == "b-rpm" || keys == "t-rpm"){
+		if(value < 5){
+			$("."+keys).text("150"+" // "+value);		
+		}else if(value < 6){
+			$("."+keys).text("200"+" // "+value);
+		}else if(value < 7){
+			$("."+keys).text("230"+" // "+value);
+		}else if(value < 8){
+			$("."+keys).text("250"+" // "+value);
+		}
+			
+	}
 
 	var tong_split = keys.split("-");	
 	if(tong_split[1] == "tong"){
@@ -855,6 +1122,42 @@ function value(keys, value){
 		}
 	}
 }
+function ani(keys, value) {
+	const $elem = $("." + keys);
+
+	if (value === true) {
+	    if (!aniIntervals[keys]) {
+	        aniIntervals[keys] = setInterval(function () {
+	            $elem.animate({ opacity: 0 }, 100, function () {
+	                $elem.animate({ opacity: 1 }, 500);
+	            });
+	        }, 1500);
+	    }
+
+	    $elem.css("display", "");
+	} else {
+	    if (aniIntervals[keys]) {
+	        clearInterval(aniIntervals[keys]);
+	        delete aniIntervals[keys];
+	    }
+
+	    $elem.stop(true, true).css("opacity", 1);
+	    $elem.css("display", "none");
+	}
+} 
+
+	/* setInterval(function () {
+		$('.b-agi-2').animate({'opacity': 0} ,100 , function () {
+			$('.b-agi-2').animate({'opacity': 1}, 500);
+		});
+	}, 1500);
+
+
+	setInterval(function () {
+		$('.sensor-pen-3').animate({'opacity': 0} ,100 , function () {
+			$('.sensor-pen-3').animate({'opacity': 1}, 500);
+		});
+	}, 1500); */
 
 //상세조회 팝업창
 function getPopupDetail(selectPumbun){

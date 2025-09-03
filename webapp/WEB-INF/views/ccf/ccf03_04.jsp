@@ -36,6 +36,23 @@
        margin: 0;
        padding: 0;
    }
+   
+@keyframes blink-effect {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation: blink-effect 1s step-end infinite;
+
+  /*
+  animation-name: blink-effect;
+  animation-duration: 1s;
+  animation-iteration-count:infinite;
+  animation-timing-function:step-end;
+  */
+}
    </style>
   <title>Document</title>
 </head>
@@ -154,6 +171,10 @@
       <div class="t-v-25-tong-1"></div>
       <div class="t-v-25-tong-2"></div>
       <div class="t-v-25-tong-3"></div>
+      <img class="t-tong-31" src="/transys/image/ccf01_02/tong.png" />
+      <div class="t-v-31-tong-1"></div>
+      <div class="t-v-31-tong-2"></div>
+      <div class="t-v-31-tong-3"></div>
       <img class="t-tong-26" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-26-tong-1"></div>
       <div class="t-v-26-tong-2"></div>
@@ -344,6 +365,8 @@
       <div class="cover-2"></div>
       <div class="cover-3"></div>
       <div class="cover-4"></div>
+      <div class="t-rpm-text">RPM NO.</div>
+  	  <div class="t-rpm"></div>
       <div class="sensor-pen-1"></div>
 	  <div class="sensor-pen-2"></div>
 	  <div class="sensor-pen-3"></div>
@@ -467,6 +490,10 @@
       <div class="b-v-25-tong-1"></div>
       <div class="b-v-25-tong-2"></div>
       <div class="b-v-25-tong-3"></div>
+      <img class="b-tong-31" src="/transys/image/ccf01_02/tong.png" />
+      <div class="b-v-31-tong-1"></div>
+      <div class="b-v-31-tong-2"></div>
+      <div class="b-v-31-tong-3"></div>
       <img class="b-tong-26" src="/transys/image/ccf01_02/tong.png" />
       <div class="b-v-26-tong-1"></div>
       <div class="b-v-26-tong-2"></div>
@@ -653,6 +680,8 @@
       <div class="b-salt-d-text">드레인</div>
       <div class="b-salt-d-pv"></div>
       <div class="b-salt-d-sp"></div>
+      <div class="b-salt-text2">RPM NO.</div>
+  	  <div class="b-rpm"></div>
 	  <div class="t-run-state-on text-green">자동운전중</div>
 	  <div class="t-run-state-off text-red">수동운전중</div>
 	  <div class="t-car2-prd">대차-2 처리품감지</div>
@@ -751,6 +780,33 @@ function v(keys, value){
 		}else{
 			$("."+keys).css("display","");
 		}
+
+		if(keys.indexOf("-agi-") != -1){
+			$("."+keys).addClass("blink");
+		}
+
+		if(keys == "t-slant-1"){
+			
+			$(".t-tong-31").css("display","");
+			$(".t-v-31-tong-1").css("display","");
+			$(".t-v-31-tong-2").css("display","");
+			$(".t-v-31-tong-3").css("display","");
+			$(".t-tong-25").css("display","none");
+			$(".t-v-25-tong-1").css("display","none");
+			$(".t-v-25-tong-2").css("display","none");
+			$(".t-v-25-tong-3").css("display","none");
+		}
+
+		if(keys == "b-slant-1"){
+			$(".b-tong-31").css("display","");
+			$(".b-v-31-tong-1").css("display","");
+			$(".b-v-31-tong-2").css("display","");
+			$(".b-v-31-tong-3").css("display","");
+			$(".b-tong-25").css("display","none");
+			$(".b-v-25-tong-1").css("display","none");
+			$(".b-v-25-tong-2").css("display","none");
+			$(".b-v-25-tong-3").css("display","none");
+		}
 		
 	}else{		
 		
@@ -791,6 +847,25 @@ function v(keys, value){
 		
 			$("."+keys).css("display","none");
 		}
+		if(keys.indexOf("-agi-") != -1){
+//			ani(keys, value);
+			$("."+keys).removeClass("blink");
+		}
+		
+		
+		if(keys == "t-slant-1"){
+			$(".t-tong-31").css("display","none");
+			$(".t-v-31-tong-1").css("display","none");
+			$(".t-v-31-tong-2").css("display","none");
+			$(".t-v-31-tong-3").css("display","none");
+		}
+
+		if(keys == "b-slant-1"){
+			$(".b-tong-31").css("display","none");
+			$(".b-v-31-tong-1").css("display","none");
+			$(".b-v-31-tong-2").css("display","none");
+			$(".b-v-31-tong-3").css("display","none");
+		}
 
 		
 	}
@@ -816,6 +891,19 @@ function value(keys, value){
 	$("."+keys).text(value);
 	$("."+keys).css("text-align","center");
 	$("."+keys).css("font-size","12pt");
+
+	if(keys == "b-rpm" || keys == "t-rpm"){
+		if(value < 5){
+			$("."+keys).text("150"+" // "+value);		
+		}else if(value < 6){
+			$("."+keys).text("200"+" // "+value);
+		}else if(value < 7){
+			$("."+keys).text("230"+" // "+value);
+		}else if(value < 8){
+			$("."+keys).text("250"+" // "+value);
+		}
+			
+	}
 
 	var tong_split = keys.split("-");	
 	if(tong_split[1] == "tong"){
@@ -856,6 +944,42 @@ function value(keys, value){
 		}
 	}
 }
+function ani(keys, value) {
+	const $elem = $("." + keys);
+
+	if (value === true) {
+	    if (!aniIntervals[keys]) {
+	        aniIntervals[keys] = setInterval(function () {
+	            $elem.animate({ opacity: 0 }, 100, function () {
+	                $elem.animate({ opacity: 1 }, 500);
+	            });
+	        }, 1500);
+	    }
+
+	    $elem.css("display", "");
+	} else {
+	    if (aniIntervals[keys]) {
+	        clearInterval(aniIntervals[keys]);
+	        delete aniIntervals[keys];
+	    }
+
+	    $elem.stop(true, true).css("opacity", 1);
+	    $elem.css("display", "none");
+	}
+} 
+
+	/* setInterval(function () {
+		$('.b-agi-2').animate({'opacity': 0} ,100 , function () {
+			$('.b-agi-2').animate({'opacity': 1}, 500);
+		});
+	}, 1500);
+
+
+	setInterval(function () {
+		$('.sensor-pen-3').animate({'opacity': 0} ,100 , function () {
+			$('.sensor-pen-3').animate({'opacity': 1}, 500);
+		});
+	}, 1500); */
 
 //상세조회 팝업창
 function getPopupDetail(selectPumbun){

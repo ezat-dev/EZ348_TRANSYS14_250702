@@ -139,6 +139,13 @@
 			text-align:center;
 		}
 
+@media print {
+	@page {
+		size: A4; /* A4 용지, 가로 방향 */
+		margin: 0.3cm; /* 모든 여백을 1cm로 설정 */
+		
+	}
+}
     </style>
 </head>
 
@@ -377,20 +384,48 @@
 				}
 			});			
 		},
-        placeholder: "검색 결과가 없습니다.", 
+        placeholder: "검색 결과가 없습니다.",
         printFormatter:function(tableHolderElement, tableElement){
             //tableHolderElement - The element that holds the header, footer and table elements
-            //tableElement - The table
-//            console.log(tableElement);
-//            console.log(tableElement.getElement());
-//            tableHolderElement
-//			$(".tabulator-print-table > thead > tr > th").css("text-align","center");
+            //tableElement - The table        	
+        	console.log(tableElement);
+/*            
+            var table = tableElement;
+            table.thead.style.fontSize = "10pt";
+            table.thead.style.textAlign = "center";
+            console.log(thead);
+            var tbody = table.tbody.tr;
+            console.log(tbody);
+*/
 
-
+//var table = tableElement;
+//table.thead.style.fontSize = "10pt";
+			$(".tabulator-print-table thead tr th").css("font-size","10pt");
+			$(".tabulator-print-table thead tr th").css("font-weight","700");
+			$(".tabulator-print-table thead tr th").css("text-align","center");
+			$(".tabulator-print-table thead tr th").css("border","1px solid black");
 			
-			$("#tabuPrintDate").text("출력일자 : "+todayDate());
-			$("#tabuWorkDate").text("생산일자 : "+$("#to_date").val());
-        }     
+			$(".tabulator-print-table tbody tr").css("height","5px");
+			$(".tabulator-print-table tbody tr td").css("font-size","10pt");
+			$(".tabulator-print-table tbody tr td").css("font-weight","700");
+			$(".tabulator-print-table tbody tr td").css("text-align","center");			
+			$(".tabulator-print-table tbody tr td").css("padding","0");			
+			$(".tabulator-print-table tbody tr td").css("border","1px solid black");
+			
+        	$("#tabuWorkDate").text("생산일자 : "+$("#to_date").val());
+        },
+        rowFormatterPrint:function(row){
+        	row.getElement().style.fontSize = "8pt";
+        	row.getElement().style.maxHeight = "10px";
+/*        	
+        	var cell = row.getElement().querySelectorAll(".tabulator-cell");
+        	cell.forEach(function(c){
+        		c.style.border = "1px solid black";
+        	});
+*/
+        	
+        	
+        }
     });
     
 	//2025-01-15 추가(검사값 수정)

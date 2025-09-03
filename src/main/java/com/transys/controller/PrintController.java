@@ -303,7 +303,8 @@ public class PrintController {
 
 	    @RequestMapping(value = "/work/dayPrint/excelDownloadJson", method = RequestMethod.POST)
 	    @ResponseBody
-	    public Map<String, Object> workYearExcelDownloadJson(@RequestParam(required = false) String jsonData,
+	    public Map<String, Object> workYearExcelDownloadJson(
+	    		@RequestParam(required = false) String jsonData,
 	                                                    HttpServletRequest request) {
 	    	Map<String, Object> rtnMap = new HashMap<String, Object>();
 			JSONObject resultObj = new JSONObject();

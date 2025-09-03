@@ -1,0 +1,7 @@
+@media print {
+	@page {
+		size: A4; /* A4 용지, 가로 방향 */
+		margin: 0.3cm; /* 모든 여백을 1cm로 설정 */
+		
+	}
+}

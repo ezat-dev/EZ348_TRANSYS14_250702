@@ -32,7 +32,7 @@
 	
 	<delete id="setMchDataDeleteWorkInline" parameterType="mchInput">
 		DELETE FROM T_WORKINLINE
-		WHERE LOTNO = #{lotno}
+		WHERE LOTNO <![CDATA[<=]]> #{lotno} AND DEVICECODE = #{devicecode}
 	</delete>
 	
 	<update id="setMchDataUpdateSiljukFail" parameterType="mchInput">

@@ -605,6 +605,15 @@
     <div class="pink-box-2"></div>
     <div class="pink-box-3"></div>
     <div class="pink-box-4"></div>
+    <img class="tong-25b" src="/transys/image/cm/tong.png" />
+    <div class="v-25b-tong-1"></div>
+    <div class="v-25b-tong-2"></div>
+    <div class="v-25b-tong-3"></div>
+    <img class="tong-46b" src="/transys/image/cm/tong.png" />
+    <div class="v-46b-tong-1"></div>
+    <div class="v-46b-tong-2"></div>
+    <div class="v-46b-tong-3"></div>
+    
 <script>
 var overviewInterval;
 const aniIntervals = {};
