@@ -33,4 +33,10 @@ public class OutPutDaoImpl implements OutPutDao{
 		sqlSessionOracle.delete("outPut.outputCancel");
 	}
 
+	@Override
+	public void setOutPutSendManu(OutPut paramOutPut) {
+		sqlSessionOracle.delete("outPut.setOutPutSendManuDelete", paramOutPut);
+		sqlSessionOracle.insert("outPut.setOutPutSendManuInsert", paramOutPut);
+	}
+
 }

@@ -42,7 +42,7 @@
 	<!-- 백업DB(MSSQL) 테스트용-->
 	<bean id="dataSourceEZ" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
 		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" /> 
-		<property name="url" value="jdbc:sqlserver://192.168.1.59:1433;DataBaseName=HTSERVERDB14;" /> 
+		<property name="url" value="jdbc:sqlserver://192.168.1.9:1433;DataBaseName=HTSERVERDB14;" /> 
 		<property name="username" value="sa" /> 
 		<property name="password" value="ezat6695"/>
 	</bean>
@@ -81,10 +81,11 @@
 		<property name="password" value="cvtfire"/>
 	</bean>
 -->
+
 	<!-- 알람DB(SQLite) -->
 	<bean id="dataSourceSQLite" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
 		<property name="driverClassName" value="org.sqlite.JDBC" /> 
-		<property name="url" value="jdbc:sqlite://127.0.0.1\Autonics\SCADAMaster\Project\Transys14\Transys\Data\Alarm\Transys_AlarmData.db" />
+		<property name="url" value="jdbc:sqlite://192.168.1.59\Transys14\Data\Alarm\Transys_AlarmData.db" />
 	</bean>
 
 	<tx:annotation-driven/>

@@ -15,5 +15,7 @@ public interface ArrivedTabDao {
 
 	void setArrivedTabDataDelete(ArrivedTab avt);
 
+	List<ArrivedTab> getArrivedTabDupChk(ArrivedTab avt);
+
 
 }

@@ -16,4 +16,13 @@
 			#{status}, #{lotno}, #{remark})
 	</insert>	
 	
+	<select id="getArrivedTabDupChk" parameterType="arrivedTab" resultType="arrivedTab">
+		SELECT *
+		FROM arrived_tab
+		WHERE 1=1
+		AND code = #{code}
+		AND fireno = #{fireno}
+		AND workdate = #{workdate}
+	</select>
+
 </mapper>

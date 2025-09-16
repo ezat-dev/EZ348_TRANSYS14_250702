@@ -13,7 +13,7 @@ public class ArrivedTabProcessor {
 	@Autowired
 	private ArrivedTabService arrivedTabService;	
 	
-	@Scheduled(fixedRate = 2000)
+	@Scheduled(fixedRate = 5000)
 	public void handle() throws InterruptedException, ExecutionException{
 		arrivedTabService.arrivedTabTimer();
 	}

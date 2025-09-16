@@ -13,7 +13,7 @@ public class MchInputProcessor {
 	@Autowired
 	private MchInputService mchInputService;	
 	
-	@Scheduled(fixedRate = 2000)
+	@Scheduled(fixedRate = 5000)
 	public void handle() throws InterruptedException, ExecutionException{
 		mchInputService.mchInputTimer();
 	}

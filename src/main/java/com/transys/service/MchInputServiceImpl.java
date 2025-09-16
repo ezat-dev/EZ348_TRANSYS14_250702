@@ -258,6 +258,7 @@ public class MchInputServiceImpl implements MchInputService{
 			}
 			
 		}else {
+/*			
 			if(!"0".equals(savePumbun) && !"0".equals(saveDevice)) {
 				desc.append("창고입고 요청신호 : "+mchInputChk+"// ");	
 				desc.append("창고 PLC태그 - 호기 : "+plcDevice+"// 품번 :  "+plcPumbun+"// ");	
@@ -265,6 +266,7 @@ public class MchInputServiceImpl implements MchInputService{
 				logger.info("MCHINPUT(14호기) : {}",desc.toString());	
 				
 			}
+*/
 		}
 		
 

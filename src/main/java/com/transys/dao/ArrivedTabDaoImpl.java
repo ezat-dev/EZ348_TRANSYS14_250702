@@ -68,4 +68,8 @@ public class ArrivedTabDaoImpl implements ArrivedTabDao{
 	public void setArrivedTabDataDelete(ArrivedTab avt) {
 		sqlSessionOracle.delete("arrivedTab.setArrivedTabDataDelete",avt);
 	}
+	@Override
+	public List<ArrivedTab> getArrivedTabDupChk(ArrivedTab avt) {
+		return sessionReturn().selectList("arrivedTab.getArrivedTabDupChk",avt);
+	}
 }

@@ -13,7 +13,7 @@ public class TrackingProcessor1 {
 	@Autowired
 	private TrackingService1 trackingService;	
 	
-	@Scheduled(fixedRate = 2000)
+	@Scheduled(fixedRate = 5000)
 	public void handle() throws InterruptedException, ExecutionException{
 		trackingService.ccf1Tracking01();
 		trackingService.ccf1Tracking02();

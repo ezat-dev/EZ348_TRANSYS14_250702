@@ -10,4 +10,6 @@ public interface OutPutDao {
 
 	void outputCancel();
 
+	void setOutPutSendManu(OutPut paramOutPut);
+
 }

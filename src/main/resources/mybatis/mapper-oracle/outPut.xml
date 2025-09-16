@@ -23,4 +23,14 @@
 		DELETE FROM OUTPUT_TAB
 	</delete>
 
+	<insert id="setOutPutSendManuInsert" parameterType="output">		
+		INSERT INTO OUTPUT_TAB (FIRENO, WORKDATE, STATUS)
+		VALUES
+		(#{fireno}, SYSDATE, '0')
+	</insert>
+
+	<delete id="setOutPutSendManuDelete" parameterType="output">		
+		DELETE FROM OUTPUT_TAB WHERE fireno = #{fireno}
+	</delete>
+
 </mapper>

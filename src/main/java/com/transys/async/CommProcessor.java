@@ -9,7 +9,7 @@ public class CommProcessor {
 
 	
 	//1초주기로 OPC UA 커넥션이 null일경우 연결
-	@Scheduled(fixedRate = 1000)
+	@Scheduled(fixedRate = 1500)
 	public void handle() {
 		MainController.dbCheck();
 		if(MainController.client == null) {

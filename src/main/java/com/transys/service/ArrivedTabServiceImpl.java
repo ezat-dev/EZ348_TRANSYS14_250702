@@ -35,37 +35,52 @@ public class ArrivedTabServiceImpl implements ArrivedTabService{
 					if(avt.getWorkdate() != null &&
 							avt.getWorkdate().length() > 0) {
 						
-						//T_PRODUCT 데이터 조회
-						Product product = arrivedTabDao.getArrivedTabProductSelect(avt);
-						if(product != null) {
-							desc.append("MSSQL T_PRODUCT 조회 : "+product.getDobun());
-							logger.info("ARRIVED_TAB 14호기- {}",desc.toString());
-							Thread.sleep(200);
-							
-							if(product.getDobun() != null) {
-								desc.append("MSSQL T_PRODUCT 조회됨 ");
-								//arrived_tab 데이터 있음.
-								//arrived_tab 추가
+						//2025-09-16 추가(MSSQL에 이미 저장되어 있는 정보인지)
+						List<ArrivedTab> t_avt = arrivedTabDao.getArrivedTabDupChk(avt);
+						
+						if(t_avt.size() == 0) {
+							//T_PRODUCT 데이터 조회
+							Product product = arrivedTabDao.getArrivedTabProductSelect(avt);
+//							System.out.println("t_avt 널");
+							if(product != null) {
+								desc.append("MSSQL T_PRODUCT 조회 : "+product.getDobun());
+								logger.info("ARRIVED_TAB 14호기- {}",desc.toString());
+								Thread.sleep(200);
 								
-								//ARRIVED_TAB 데이터 저장
-								arrivedTabDao.setArrivedTabDataInsert(avt);
-								desc.append("MSSQL arrived_tab INSERT 완료 ");
-								
-								//arrived_tab 삭제
-								arrivedTabDao.setArrivedTabDataDelete(avt);
-								desc.append("CODE : "+avt.getCode()+"// fireno : "+avt.getFireno()+"// workdate : "+avt.getWorkdate());
-								desc.append("ORACLE arrived_tab DELETE 완료 ");
+								if(product.getDobun() != null) {
+									desc.append("MSSQL T_PRODUCT 조회됨 ");
+									//arrived_tab 데이터 있음.
+									//arrived_tab 추가
+									logger.info("ARRIVED_TAB 14호기- {}",desc.toString());
+									
+									//ARRIVED_TAB 데이터 저장
+									arrivedTabDao.setArrivedTabDataInsert(avt);
+									desc.append("MSSQL arrived_tab INSERT 완료 ");
+									logger.info("ARRIVED_TAB 14호기- {}",desc.toString());
+									
+									//arrived_tab 삭제
+									arrivedTabDao.setArrivedTabDataDelete(avt);
+									desc.append("CODE : "+avt.getCode()+"// fireno : "+avt.getFireno()+"// workdate : "+avt.getWorkdate());
+									desc.append("ORACLE arrived_tab DELETE 완료 ");
+
+									logger.info("ARRIVED_TAB 14호기- {}",desc.toString());
+								}
+							}else {
+								desc.append("MSSQL T_PRODUCT 데이터 없음. ");
 								logger.info("ARRIVED_TAB 14호기- {}",desc.toString());
 							}
 						}else {
-							desc.append("MSSQL T_PRODUCT 데이터 없음. ");
+							desc.append("MSSQL ARRIVED_TAB에 이미 저장된 데이터. ");
+							logger.info("ARRIVED_TAB 14호기- {}",desc.toString());
 						}
 		
 						
-					}		
-				}
+					}else {
+						desc.append("ORACLE 날짜정보 등록안됨 ");
+						logger.info("ARRIVED_TAB 14호기- {}",desc.toString());
+					}
 			}
 		}
 	}
-
+	}
 }
